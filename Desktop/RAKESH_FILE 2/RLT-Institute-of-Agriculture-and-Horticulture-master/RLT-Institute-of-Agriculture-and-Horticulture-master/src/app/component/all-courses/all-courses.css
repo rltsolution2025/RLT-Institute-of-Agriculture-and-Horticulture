@@ -1,0 +1,187 @@
+.course-banner {
+  background: linear-gradient(rgba(0, 51, 36, 0.6), rgba(0, 51, 36, 0.6)),
+    url('/courses/Agri-courses.png') no-repeat center center;
+  background-size: cover;
+  /* Show full image */
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 350px;
+  position: relative;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 95%;
+  max-width: 1400px;
+  /* Optional limit */
+  border-radius: 30px;
+}
+
+
+.overlay {
+  text-align: center;
+  color: #fff;
+  animation: slideTextUp 1.2s ease-out forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.course-heading {
+  font-size: 3.2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.text-highlight {
+  color: #9cff7a;
+  text-shadow: 1px 1px 2px #1b4d1b;
+}
+
+.course-subtitle {
+  font-size: 1.25rem;
+  margin-top: 10px;
+  color: #e0f7ea;
+  font-style: italic;
+}
+
+/* Slide Up Text Animation */
+@keyframes slideTextUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.custom-glass-card {
+  background: rgba(175, 190, 184, 0.75);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease-in-out;
+  padding: 1rem;
+}
+
+.custom-glass-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 40px 75px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 128, 0, 0.2);
+}
+
+.course-card {
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.course-card {
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  background-color: #f3fff3;
+}
+
+.course-card:hover {
+  box-shadow: 0 12px 20px 10px rgba(0, 0, 0, 0.15);
+}
+
+.tilt-left:hover {
+  transform: rotate(-1.5deg) scale(1.02);
+}
+
+.tilt-right:hover {
+  transform: rotate(1.5deg) scale(1.02);
+}
+
+.course-details .detail-item {
+  display: flex;
+  font-size: 0.95rem;
+}
+
+.btn-outline-success {
+  font-size: 18px;
+  font-weight: bolder;
+}
+
+.text-dark {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.text-added {
+  padding-left: 10px;
+  font-style: italic;
+  font-size: 18px;
+  color: rgb(32, 22, 22);
+  font-weight: 400;
+}
+
+.btn-outline-success:hover i {
+  transform: translateX(4px);
+  transition: transform 0.2s ease;
+}
+
+.ug-title {
+  font-size: 1.75rem;
+  color: #00470c;
+  /* Bootstrap primary */
+  padding-left: 12px;
+  border-left: 5px solid #198754;
+  /* Bootstrap success */
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.ug-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #198754;
+  margin-top: 6px;
+  transition: width 0.3s ease;
+}
+
+.ug-title:hover::after {
+  width: 100px;
+}
+
+.ug-title:hover {
+  color: #029946;
+  cursor: default;
+}
+
+.course-banner .breadcrumb a {
+  transition: color 0.3s ease;
+}
+
+.course-banner .breadcrumb a:hover {
+  color: #a4f1a1;
+  /* light green hover */
+}
+
+.text-light:hover {
+  text-decoration: underline;
+}
+
+.text-light {
+  text-decoration: none;
+}
+
+.text-need {
+  cursor: pointer;
+  text-decoration: underline;
+  color: #fffb09;
+  font-weight: 700;
+}

@@ -1,0 +1,110 @@
+<div class="container-fluid course-banner">
+  <div class="overlay text-center text-white py-5">
+    <h2 class="course-heading mb-3">
+      Explore Our <span class="text-highlight">Agriculture Courses</span>
+    </h2>
+    <p class="course-subtitle mb-4">
+      Empowering the next generation with cutting-edge knowledge in Agriculture & Horticulture.
+    </p>
+
+    <!-- Optional breadcrumb -->
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb justify-content-center bg-transparent p-0 m-0">
+        <li class="breadcrumb-item">
+          <a routerLink="/home" class="text-light">
+            <i class="fas fa-home me-1"></i>Home
+          </a>
+          &nbsp;&nbsp;&nbsp;--->
+        </li>
+        <li class="breadcrumb-item active  text-need" aria-current="page">
+          <i class="fas fa-book-open me-1"></i>Our Courses
+        </li>
+      </ol>
+    </nav>
+  </div>
+</div>
+
+<div class="container my-5">
+
+  <!-- P.G. Diploma Section -->
+  <h3 class="mb-4 text-uppercase fw-bold position-relative ug-title">P.G. Diploma Courses</h3>
+  <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
+    <div class="col" *ngFor="let card of pgDiplomas; let i = index">
+      <div class="card h-100 shadow-sm course-card border-0" [ngClass]="i % 2 === 0 ? 'tilt-left' : 'tilt-right'">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title fw-bold text-success">{{ card.title }}</h5>
+          <p class="card-text text-muted flex-grow-1">{{ card.text }}</p>
+          <div class="course-details d-flex flex-column gap-1 mb-3">
+            <div class="detail-item">
+              <span class="text-dark">Duration:</span>
+              <span class="text-added">{{ card.duration }}</span>
+            </div>
+            <div class="detail-item">
+              <span class="text-dark">Eligibility:</span>
+              <span class="text-added">{{ card.eligibility }}</span>
+            </div>
+          </div>
+          <a [href]="card.link" class="btn btn-sm btn-outline-success rounded-pill px-3 mt-auto">
+            Explore More <i class="fa-solid fa-arrow-right ms-2"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- U.G. Diploma Section -->
+  <h3 class="mb-4 text-uppercase fw-bold position-relative ug-title">U.G. Diploma Courses</h3>
+  <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
+    <div class="col" *ngFor="let card of ugDiplomas; let i = index">
+      <div class="card h-100 shadow-sm course-card border-0" [ngClass]="i % 2 === 0 ? 'tilt-left' : 'tilt-right'">
+        <!-- same card-body content -->
+         <div class="card-body d-flex flex-column">
+          <h5 class="card-title fw-bold text-success">{{ card.title }}</h5>
+          <p class="card-text text-muted flex-grow-1">{{ card.text }}</p>
+          <div class="course-details d-flex flex-column gap-1 mb-3">
+            <div class="detail-item">
+              <span class="text-dark">Duration:</span>
+              <span class="text-added">{{ card.duration }}</span>
+            </div>
+            <div class="detail-item">
+              <span class="text-dark">Eligibility:</span>
+              <span class="text-added">{{ card.eligibility }}</span>
+            </div>
+          </div>
+          <a [href]="card.link" class="btn btn-sm btn-outline-success rounded-pill px-3 mt-auto">
+            Explore More <i class="fa-solid fa-arrow-right ms-2"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Certificate Section -->
+  <h3 class="mb-4 text-uppercase fw-bold position-relative ug-title">Certificate Courses</h3>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col" *ngFor="let card of certificates; let i = index">
+      <div class="card h-100 shadow-sm course-card border-0" [ngClass]="i % 2 === 0 ? 'tilt-left' : 'tilt-right'">
+        <!-- same card-body content -->
+         <div class="card-body d-flex flex-column">
+          <h5 class="card-title fw-bold text-success">{{ card.title }}</h5>
+          <p class="card-text text-muted flex-grow-1">{{ card.text }}</p>
+          <div class="course-details d-flex flex-column gap-1 mb-3">
+            <div class="detail-item">
+              <span class="text-dark">Duration:</span>
+              <span class="text-added">{{ card.duration }}</span>
+            </div>
+            <div class="detail-item">
+              <span class="text-dark">Eligibility:</span>
+              <span class="text-added">{{ card.eligibility }}</span>
+            </div>
+          </div>
+          <a [href]="card.link" class="btn btn-sm btn-outline-success rounded-pill px-3 mt-auto">
+            Explore More <i class="fa-solid fa-arrow-right ms-2"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+

@@ -1,0 +1,37 @@
+.thank-you-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  background: #f8f9fa; /* light Bootstrap background */
+  color: #333;
+  margin: 20px auto;
+  padding: 40px 20px;
+  max-width: 600px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  border-radius: 15px;
+  text-align: center;
+}
+
+.thank-you-page h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.thank-you-page p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+.thank-you-page .btn {
+  font-size: 1.1rem;
+  padding: 10px 25px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.thank-you-page .btn:hover {
+  transform: translateY(-2px);
+}

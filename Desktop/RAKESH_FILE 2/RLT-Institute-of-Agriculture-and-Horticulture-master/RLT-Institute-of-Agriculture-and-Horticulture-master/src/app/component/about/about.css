@@ -1,0 +1,43 @@
+.about-card {
+    background: #f0fff5;
+    border-left: 5px solid #28a745;
+}
+
+.section-card {
+    background: #ffffff;
+    border-left: 4px solid #28a745;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.about-icon {
+    font-size: 40px;
+    color: #28a745;
+}
+
+.section-heading {
+    font-weight: 700;
+    color: #333;
+}
+
+.section-subheading {
+    font-weight: 500;
+    color: #555;
+}
+
+.section-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #666;
+}
+.display-5{
+    color: #025816;
+}
+.text-custom{
+    color:#1f3117;
+    font-weight: 600;
+}

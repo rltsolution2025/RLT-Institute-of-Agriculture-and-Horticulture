@@ -1,0 +1,248 @@
+/* Top Bar */
+.custom-bg-1 {
+  background-color: #fff;
+}
+
+.mail-id,
+.phone {
+  text-decoration: none;
+  color: #0ca014;
+  margin-left: 6px;
+  font-size: 18px;
+  font-weight: bolder;
+  font-style: italic;
+  font-family: 'Trebuchet MS', sans-serif;
+}
+
+.fa-envelope,
+.fa-mobile-screen {
+  color: #2d9607;
+  font-size: 20px;
+}
+
+/* Hover Effects */
+.mail-id:hover,
+.phone:hover,
+.fa-envelope:hover,
+.fa-mobile-screen:hover {
+  color: #829c79;
+}
+
+/* Logo and Gradient Navbar */
+.custom-bg-2 {
+  background: linear-gradient(#91ff69, #2d9607, #869482);
+}
+
+.image {
+  width: 80px;
+  height: auto;
+  background-color: #ffffff;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.agriLogo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-text-1 {
+  color: #fff;
+  font-weight: bolder;
+  font-size: 28px;
+  line-height: 1;
+}
+
+.logo-text-2 {
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* Nav Links */
+.nav-link {
+  color: #fff;
+  font-weight: bold;
+  font-size: 17px;
+  padding: 8px 20px;
+  position: relative;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #c5dfcf;
+}
+
+/* Active nav link with animated underline */
+.nav-link.active {
+  color: #daebd5;
+}
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 10%;
+  width: 80%;
+  height: 3px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #caffbf, #9bf6ff);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: all 0.4s ease-in-out;
+}
+
+
+
+/* Nav items spacing */
+.nav-item {
+  margin-left: 10px;
+}
+
+/* Dropdown Menu Base */
+.dropdown-menu {
+  background-color: #f8fff9;
+  border: 1px solid #b4e2c4;
+  border-radius: 10px;
+  padding: 8px 0;
+  box-shadow: 0 4px 12px rgba(60, 179, 113, 0.2);
+  min-width: 220px;
+  animation: dropdownFade 0.3s ease;
+}
+
+/* Fade animation */
+@keyframes dropdownFade {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Individual item */
+.dropdown-item {
+  padding: 10px 18px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #14532d;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Hover style */
+.dropdown-item:hover {
+  background-color: #defbe6;
+  color: #064e3b;
+  padding-left: 22px;
+}
+
+/* Submenu indicator */
+.dropdown-submenu > a::after {
+  content: "";
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* Submenu base */
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu > .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-left: 0;
+  border-radius: 10px;
+  background-color: #f0fdf4;
+  border: 1px solid #a7f3d0;
+  min-width: 220px;
+  box-shadow: 0 8px 16px rgba(34, 197, 94, 0.15);
+  z-index: 1051;
+}
+
+/* Hover to show submenu */
+.dropdown-submenu:hover > .dropdown-menu {
+  display: block;
+}
+
+/* Hover to open main menu */
+.nav-item.dropdown:hover > .dropdown-menu {
+  display: block;
+}
+
+/* Hide Bootstrap default arrow */
+.nav-item.dropdown > .nav-link::after {
+  display: none;
+}
+/* Social Icon Styling */
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin-left: 8px;
+    border-radius: 50%;
+    background-color: #f2f2f2;
+    color: #333;
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+
+.social-icon:hover {
+    background-color: #28a745; /* You can change hover color */
+    color: #fff;
+    transform: translateY(-3px);
+}
+/* Reduce logo size for screens between 312px and 986px */
+@media (max-width: 986px) and (min-width: 312px) {
+  .agriLogo .image {
+    width: 70px; /* smaller logo */
+  }
+
+  .logo-text-1 {
+    font-size: 1.6rem;
+  }
+
+  .logo-text-2 {
+    font-size: 0.8rem;
+  }
+}@media (max-width: 991.98px) {
+  .desktop-header {
+    display: none;
+  }
+
+  app-mobile-header {
+    display: block;
+  }
+}
+
+/* Desktop Header shown above 992px */
+.desktop-header {
+  display: block;
+}
+app-mobile-header {
+  display: none;
+}
+
+/* Mobile Header shown below 992px */
+@media (max-width: 991.98px) {
+  .desktop-header {
+    display: none;
+  }
+  app-mobile-header {
+    display: block;
+  }
+}

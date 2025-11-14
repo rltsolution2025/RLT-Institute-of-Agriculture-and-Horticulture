@@ -1,0 +1,302 @@
+.course-banner {
+    background: linear-gradient(rgba(0, 51, 36, 0.6), rgba(0, 51, 36, 0.6)),
+        url('/courses/P.G. Diploma in Agriculture Management.png') no-repeat center center;
+    background-size: fill;
+    /* Show full image */
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 350px;
+    position: relative;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 95%;
+    max-width: 1400px;
+    /* Optional limit */
+    border-radius: 30px;
+}
+
+
+.overlay {
+    text-align: center;
+    color: #fff;
+    animation: slideTextUp 1.2s ease-out forwards;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.course-heading {
+    font-size: 3.2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.text-highlight {
+    color: #9cff7a;
+    text-shadow: 1px 1px 2px #1b4d1b;
+}
+
+.course-subtitle {
+    font-size: 1.25rem;
+    margin-top: 10px;
+    color: #e0f7ea;
+    font-style: italic;
+}
+
+/* Slide Up Text Animation */
+@keyframes slideTextUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.gradient-bg {
+    background: linear-gradient(to right, #54644e, #e8f5e9);
+}
+
+.img-box img {
+    border: 6px solid #cfe2d1;
+    transition: transform 0.3s ease;
+}
+
+.img-box img:hover {
+    transform: scale(1.02);
+}
+
+.img-fluid {
+    width: 1200px;
+    height: 460px;
+}
+
+.section-heading {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #157347;
+    border-left: 4px solid #198754;
+    padding-left: 10px;
+    margin-bottom: 1rem;
+    background: linear-gradient(to right, #e7fbe9, #ffffff);
+    border-radius: 5px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+.styled-list {
+    list-style: none;
+    padding-left: 0;
+    font-size: 1.05rem;
+}
+
+.styled-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.65rem;
+    color: #444;
+}
+.custom-bg {
+    background-color: #eaf8f0; /* light greenish tone */
+}
+.text-gradient {
+    background: linear-gradient(to right, #198754, #00c98d);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.futuristic-shadow {
+    box-shadow: 0 4px 12px rgba(20, 60, 30, 0.1), 0 2px 6px rgba(20, 60, 30, 0.08);
+    border-radius: 1rem;
+}
+
+.cta-box {
+    background: linear-gradient(to right, #198754, #38d39f);
+}
+
+.course-banner .breadcrumb a {
+    transition: color 0.3s ease;
+}
+
+.course-banner .breadcrumb a:hover {
+    color: #a4f1a1;
+    /* light green hover */
+}
+
+.text-light:hover {
+    text-decoration: underline;
+}
+
+.text-light {
+    text-decoration: none;
+}
+.custom-cta {
+  background: linear-gradient(to right, #1baa67, #838b87); /* custom green gradient */
+}
+.text-need {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #fffb09;
+    font-weight: 700;
+}
+/* Slide Up (e.g., for overlay text) */
+@keyframes slideTextUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade In (general purpose) */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Zoom Fade In (e.g., for banner or images) */
+@keyframes zoomFadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Pulse Highlight (for glowing text or buttons) */
+@keyframes pulseHighlight {
+  0%, 100% {
+    transform: scale(1);
+    text-shadow: 0 0 4px #9cff7a;
+  }
+  50% {
+    transform: scale(1.05);
+    text-shadow: 0 0 10px #c1ffa3;
+  }
+}
+
+/* Fade Slide In (e.g., for list items) */
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Bounce In (fun effect for icons or cards) */
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Rotate In (for logos or images) */
+@keyframes rotateIn {
+  0% {
+    transform: rotate(-200deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+/* Zoom Out on Hover */
+@keyframes zoomOutHover {
+  to {
+    transform: scale(1.05);
+  }
+}
+
+/* Glow on Hover (buttons, links) */
+@keyframes glowHover {
+  0% {
+    box-shadow: 0 0 5px #061611;
+  }
+  100% {
+    box-shadow: 0 0 15px #000000;
+  }
+}
+/* For headings */
+.course-heading {
+  animation: slideTextUp 1.2s ease-out forwards;
+}
+
+/* For subtitle */
+.course-subtitle {
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+/* For course banner */
+.course-banner {
+  animation: zoomFadeIn 1.5s ease-out forwards;
+}
+
+/* For highlighted text */
+.text-highlight {
+  animation: pulseHighlight 2.5s infinite ease-in-out;
+}
+
+/* For list items */
+.styled-list li {
+  animation: fadeSlideIn 1s ease-out forwards;
+  opacity: 0;
+}
+
+/* For images */
+.img-box img {
+  transition: transform 0.3s ease;
+}
+.img-box img:hover {
+  animation: zoomOutHover 0.3s ease-in-out forwards;
+}
+
+/* For CTA box or buttons on hover */
+.cta-box:hover {
+  animation: glowHover 0.5s alternate infinite;
+}
+@media (max-width: 986px) and (min-width: 312px){
+  .course-heading{
+    font-size: 30px;
+  }
+  .course-subtitle{
+     font-size: 19px;
+  }
+ .breadcrumb-item{
+  font-size: 14px;
+ }
+}

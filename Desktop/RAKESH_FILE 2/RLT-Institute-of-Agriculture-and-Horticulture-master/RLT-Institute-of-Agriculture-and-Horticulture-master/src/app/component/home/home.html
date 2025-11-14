@@ -1,0 +1,221 @@
+<div class="bg-video-container">
+    <video autoplay muted loop class="bg-video">
+        <source src="agri video.mp4" type="video/mp4" />
+    </video>
+
+    <div class="video-overlay">
+        <h1>Welcome to RLT Institute of Agriculture and Horticulture</h1>
+        <p class="lead">Grow with Knowledge. Lead with Innovation. Build a Greener Tomorrow.</p>
+        <p>
+            At RLT Institute of Agriculture and Horticulture, we believe that agriculture is not just a profession —
+            it’s the foundation of life and a pathway to a sustainable future. Located in the fertile and culturally
+            rich state of Tamil Nadu, our institute is dedicated to nurturing young minds into future-ready
+            agri-professionals.
+        </p>
+        <p>
+            We offer an immersive educational experience that blends traditional farming practices with modern
+            scientific techniques, equipping students with the skills, tools, and mindset required to thrive in today's
+            agricultural ecosystem.
+        </p>
+        <p>
+            Whether you're passionate about sustainable farming, organic crop production, advanced horticultural
+            methods, or agri-entrepreneurship, RLT provides the perfect platform to learn, experiment, and grow.
+        </p>
+    </div>
+    <div class="btn custom-btn" (click)="navigateTo()">
+        Our Courses
+    </div>
+</div>
+
+<div class="container section-2 py-5">
+    <div class="row">
+        <!-- Left Content Section -->
+        <div class="col-md-6">
+            <div class="sec-heading mb-4">
+                Why <span class="sec-color">Diploma in Horticulture</span>?
+            </div>
+            <div class="sec-content mb-3">
+                A career in Horticulture offers a fulfilling path for those passionate about plants, sustainability, and
+                agriculture-based innovation. Pursuing a Diploma in Horticulture provides a well-rounded foundation in
+                the
+                science and business of growing fruits, vegetables, flowers, and ornamental plants—vital sectors in
+                modern
+                agriculture.
+            </div>
+            <div class="sec-content mb-3">
+                Horticulture is a rapidly growing industry that encompasses plant breeding, crop production,
+                landscaping,
+                greenhouse management, and post-harvest technology. It plays a crucial role in food security, rural
+                development,
+                and environmental sustainability. With increasing demand for organic produce and green urban spaces,
+                career
+                opportunities in this field are expanding both in India and globally.
+            </div>
+            <div class="sec-content">
+                At <b>RLT Institute of Agriculture and Horticulture</b>, our diploma program is designed to equip
+                students with
+                real-world skills through a mix of practical field training, lab work, and industry exposure. As the
+                world
+                shifts toward eco-friendly and technology-driven farming, we ensure our students are prepared to thrive
+                in this
+                dynamic future. Join an ecosystem where your growth is rooted in knowledge and innovation.
+            </div>
+        </div>
+
+        <!-- Right Contact Form -->
+        <div class="col-md-6" id="contactFormSection">
+            <div class="contact-form bg-light p-4 rounded shadow">
+                <h5 class="mb-3">Get in Touch</h5>
+                <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="p-4 border rounded">
+                    <!-- Name Field -->
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name *</label>
+                        <div *ngIf="contactForm.get('name')?.touched && contactForm.get('name')?.invalid"
+                            class="text-danger">
+                            Name is required.
+                        </div>
+                        <input id="name" class="form-control" formControlName="name" placeholder="Enter your name" />
+                    </div>
+
+                    <!-- Email Field -->
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email *</label>
+                        <div *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.errors"
+                            class="text-danger">
+                            <div *ngIf="contactForm.get('email')?.errors?.['required']">Email is required.</div>
+                            <div *ngIf="contactForm.get('email')?.errors?.['email']">Enter a valid email address.</div>
+                        </div>
+                        <input id="email" class="form-control" formControlName="email" placeholder="Enter your email" />
+                    </div>
+
+                    <!-- Phone Field -->
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Phone *</label>
+                        <div *ngIf="contactForm.get('phone')?.touched && contactForm.get('phone')?.errors"
+                            class="text-danger mt-1">
+                            <div *ngIf="contactForm.get('phone')?.errors?.['required']">
+                                Phone number is required.
+                            </div>
+                            <div *ngIf="contactForm.get('phone')?.errors?.['pattern']">
+                                Please enter a valid 10-digit
+                            </div>
+                        </div>
+                        <input id="phone" class="form-control" formControlName="phone"
+                            placeholder="Enter your phone number" maxlength="10" />
+                    </div>
+
+
+                    <!-- Category Field -->
+                    <div class="mb-3">
+                        <label for="courseCategory" class="form-label">Select Course Category *</label>
+                        <div *ngIf="contactForm.get('courseCategory')?.touched && contactForm.get('courseCategory')?.invalid"
+                            class="text-danger">
+                            Please select a course category.
+                        </div>
+                        <select id="courseCategory" class="form-select" formControlName="courseCategory"
+                            (change)="onCategoryChange()">
+                            <option value="" selected>-- Select Category --</option>
+                            <option value="pg">P.G. Diploma Courses</option>
+                            <option value="ug">U.G. Diploma Courses</option>
+                            <option value="certificate">Certificate Courses</option>
+                        </select>
+
+                    </div>
+
+                    <!-- Course Field -->
+                    <div class="mb-3" *ngIf="filteredCourses.length > 0">
+                        <label for="course" class="form-label">Select Course *</label>
+                        <div *ngIf="contactForm.get('course')?.touched && contactForm.get('course')?.invalid"
+                            class="text-danger">
+                            Please select a course.
+                        </div>
+                        <select id="course" class="form-select" formControlName="course">
+                            <option value="" selected>-- Select Course --</option>
+                            <option *ngFor="let course of filteredCourses" [value]="course">{{ course }}</option>
+                        </select>
+
+                    </div>
+                    <button type="submit" class="btn cust-btn" [disabled]="!contactForm.valid">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="whatsapp-chatbox">
+    <a href="https://wa.me/917358713713?text=Hello!%20I%20want%20to%20know%20more%20about%20your%20courses."
+        target="_blank" aria-label="Chat on WhatsApp" class="chat-icon">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <div class="chat-message">
+        <p>👋 Hi! Need help?<br /><strong>Chat with us on WhatsApp.</strong></p>
+    </div>
+</div>
+
+<div class="chatbot">
+    <a href="" target="_blank" class="chatbot-icon"></a>
+    <i class="fab fa-chatbot"></i>
+</div>
+
+<!-- About Us-->
+<div class="container py-5">
+    <div class="section-header text-center mb-5">
+        <h2 class="card-header-alt">
+            🌾 What Makes Us Unique in <span class="highlight-green">Agriculture & Horticulture</span>
+        </h2>
+        <p class="section-subtext">
+            Blending tradition with innovation for the next generation of green leaders
+        </p>
+    </div>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col" *ngFor="let card of cards">
+            <div class="card custom-card shadow h-100">
+                <div id="{{ card.id }}" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2500">
+                    <div class="carousel-inner">
+                        <!--<div class="carousel-item active">
+                            <img [src]="card.img1" class="d-block  card-img-top" alt="Image 1">
+                        </div>-->
+                        <div class="carousel-item active">
+                            <img [src]="card.img2" class="d-block  card-img-top" alt="Image 2">
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">{{ card.title }}</h5>
+                    <p class="card-text">{{ card.text }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="recruiters-slider-section py-5">
+    <div class="container">
+        <h2 class="section-title text-center mb-5">
+            ---- Our <span class="highlight">Recruiters</span> ----
+        </h2>
+        <div id="recruiterCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+            <div class="carousel-inner">
+                <div class="carousel-item" *ngFor="let group of groupedRecruiters; let i = index"
+                    [class.active]="i === 0">
+                    <div class="d-flex justify-content-center flex-wrap gap-4">
+                        <div *ngFor="let recruiter of group" class="recruiter-card">
+                            <div class="recruiter-logo-wrapper">
+                                <img [src]="recruiter.logo" [alt]="recruiter.name" class="img-fluid recruiter-logo" />
+                            </div>
+                            <div class="recruiter-name">{{ recruiter.name }}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#recruiterCarousel"
+                data-bs-slide="prev">
+                <i class="fas fa-chevron-left fa-lg"></i>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#recruiterCarousel"
+                data-bs-slide="next">
+                <i class="fas fa-chevron-right fa-lg"></i>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,7 @@
+<div class="thank-you-page text-center p-5 rounded shadow-lg">
+  <i class="fas fa-check-circle fa-5x mb-4 text-success"></i>
+  <h1>Thank You! for Submitting</h1>
+  <p *ngIf="userName">Dear {{ userName }}, Our Team will be contact you shortly.</p>
+  <p *ngIf="!userName">Your enquiry has been submitted successfully.</p>
+  <a routerLink="/home" class="btn btn-success mt-4"><i class="fas fa-home me-2"></i>Back to Home</a>
+</div>

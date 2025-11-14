@@ -1,11 +1,11 @@
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgIf } from '@angular/common';
 import { Component, ElementRef, HostListener, Renderer2, ViewChild } from '@angular/core';
 import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 
 
 @Component({
   selector: 'app-mobile-header',
-  imports: [RouterLink, CommonModule],
+  imports: [RouterLink, CommonModule,NgIf],
   templateUrl: './mobile-header.html',
   styleUrl: './mobile-header.css'
 })
